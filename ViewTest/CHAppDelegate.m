@@ -22,6 +22,12 @@
     view1.backgroundColor = [UIColor whiteColor];
     [self.window addSubview:view1];
     
+    // create another view
+    CGRect frame2 = CGRectMake(20, 20, 50, 50);
+    CHSimpleView* view2 = [[CHSimpleView alloc] initWithFrame:frame2];
+    view2.backgroundColor = [UIColor blueColor];
+    [view1 addSubview:view2];
+    
     self.window.backgroundColor = [UIColor redColor];
     [self.window makeKeyAndVisible];
     return YES;
