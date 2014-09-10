@@ -7,6 +7,7 @@
 //
 
 #import "CHAppDelegate.h"
+#import "CHSimpleView.h"
 
 @implementation CHAppDelegate
 
@@ -14,6 +15,13 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    // create view
+    CGRect frame1 = CGRectMake(50, 50, 100, 100);
+    CHSimpleView* view1 = [[CHSimpleView alloc] initWithFrame:frame1];
+    view1.backgroundColor = [UIColor whiteColor];
+    [self.window addSubview:view1];
+    
     self.window.backgroundColor = [UIColor redColor];
     [self.window makeKeyAndVisible];
     return YES;
